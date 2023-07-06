@@ -75,7 +75,7 @@
             // 
             labelGameover.AutoSize = true;
             labelGameover.Font = new Font("Yu Gothic UI", 28F, FontStyle.Regular, GraphicsUnit.Point);
-            labelGameover.Location = new Point(393, 180);
+            labelGameover.Location = new Point(393, 242);
             labelGameover.Name = "labelGameover";
             labelGameover.Size = new Size(193, 51);
             labelGameover.TabIndex = 2;
@@ -83,7 +83,7 @@
             // 
             // buttonTitle
             // 
-            buttonTitle.Location = new Point(407, 260);
+            buttonTitle.Location = new Point(407, 336);
             buttonTitle.Name = "buttonTitle";
             buttonTitle.Size = new Size(153, 70);
             buttonTitle.TabIndex = 3;
@@ -95,17 +95,17 @@
             // 
             labelClear.AutoSize = true;
             labelClear.Font = new Font("Yu Gothic UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            labelClear.Location = new Point(120, 247);
+            labelClear.Location = new Point(428, 180);
             labelClear.Name = "labelClear";
-            labelClear.Size = new Size(110, 45);
+            labelClear.Size = new Size(109, 45);
             labelClear.TabIndex = 4;
-            labelClear.Text = "Clear!!";
+            labelClear.Text = "クリア!!";
             // 
             // labelScore
             // 
             labelScore.AutoSize = true;
             labelScore.Font = new Font("Yu Gothic UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            labelScore.Location = new Point(867, 9);
+            labelScore.Location = new Point(432, 9);
             labelScore.Name = "labelScore";
             labelScore.Size = new Size(105, 45);
             labelScore.TabIndex = 5;
@@ -115,11 +115,11 @@
             // 
             labelHighScore.AutoSize = true;
             labelHighScore.Font = new Font("Yu Gothic UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            labelHighScore.Location = new Point(753, 138);
+            labelHighScore.Location = new Point(393, 129);
             labelHighScore.Name = "labelHighScore";
-            labelHighScore.Size = new Size(105, 45);
+            labelHighScore.Size = new Size(181, 90);
             labelHighScore.TabIndex = 6;
-            labelHighScore.Text = "00000";
+            labelHighScore.Text = "今回のスコア\r\n　00000";
             // 
             // tempPlayer
             // 
@@ -134,9 +134,10 @@
             // labeltimer
             // 
             labeltimer.AutoSize = true;
-            labeltimer.Location = new Point(934, 437);
+            labeltimer.Font = new Font("Yu Gothic UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            labeltimer.Location = new Point(834, 9);
             labeltimer.Name = "labeltimer";
-            labeltimer.Size = new Size(25, 15);
+            labeltimer.Size = new Size(71, 45);
             labeltimer.TabIndex = 8;
             labeltimer.Text = "000";
             // 
@@ -152,22 +153,22 @@
             // tempObstacle
             // 
             tempObstacle.AutoSize = true;
-            tempObstacle.Font = new Font("Yu Gothic UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            tempObstacle.Font = new Font("Yu Gothic UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             tempObstacle.Location = new Point(683, 380);
             tempObstacle.Name = "tempObstacle";
-            tempObstacle.Size = new Size(48, 37);
+            tempObstacle.Size = new Size(39, 28);
             tempObstacle.TabIndex = 10;
-            tempObstacle.Text = "👮";
+            tempObstacle.Text = "🔶";
             // 
             // tempItem
             // 
             tempItem.AutoSize = true;
-            tempItem.Font = new Font("Yu Gothic UI", 17F, FontStyle.Regular, GraphicsUnit.Point);
+            tempItem.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             tempItem.Location = new Point(829, 359);
             tempItem.Name = "tempItem";
-            tempItem.Size = new Size(46, 31);
+            tempItem.Size = new Size(26, 21);
             tempItem.TabIndex = 11;
-            tempItem.Text = "🍖";
+            tempItem.Text = "★";
             // 
             // Form1
             // 
