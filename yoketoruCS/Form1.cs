@@ -224,8 +224,6 @@ namespace yoketoruCS
                         chrLabels[i].Visible = false;
                         if(itemCount <= 0)
                         {
-                            if (IsHit(chrLabels[i]))
-                             { 
                             
                             nextState = State.Clear;
                         }
