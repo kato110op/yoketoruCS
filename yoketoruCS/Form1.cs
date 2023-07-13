@@ -273,6 +273,7 @@ namespace yoketoruCS
             score = Math.Min(score + Point,ScoreMax);
 
             UpdateScore();
+
         }
 
         void UpdateScore()
