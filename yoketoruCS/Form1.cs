@@ -10,11 +10,11 @@ namespace yoketoruCS
 
         static int ScoreMax => 99999;
         static int SpeedMax = 10;
-        static int PointRate => 100;
+        static int PointRate => 50;
        
         static int PlayerMax => 1;
-        static int ItemMax => 3;
-        static int ObstacleMax => 3;
+        static int ItemMax => 8;
+        static int ObstacleMax => 8;
         static int PlayerIndex => 0;
         static int ObstacleIndex => PlayerIndex + PlayerMax;
         static int ItemIndex => ObstacleIndex + ObstacleMax;
@@ -44,7 +44,7 @@ namespace yoketoruCS
 
         int score;
         int timer;
-        int hightScore = 100;
+        int highScore = 100;
         int StartTimer => 200;
         //const int CStartTimer = 200;
 
@@ -52,10 +52,13 @@ namespace yoketoruCS
         public Form1()
         {
             InitializeComponent();
+
             for (int i = 0; i < LabelMax; i++)
             {
                 chrLabels[i] = new Label();
+                chrLabels[i].Visible = false;
                 chrLabels[i].AutoSize = true;
+                //chrLabels[i].Top = i* 24
                 chrLabels[i].Top = i * 24;
                 Controls.Add(chrLabels[i]);
                 if (i < ObstacleIndex)
@@ -112,6 +115,7 @@ namespace yoketoruCS
                     break;
 
                 case State.Game:
+                    chrLabels[PlayerIndex].Visible = true;
                     labelTitle.Visible = false;
                     buttonStart.Visible = false;
                     labelHighScore.Visible = false;
@@ -133,12 +137,14 @@ namespace yoketoruCS
                     labelGameover.Visible = true;
                     buttonTitle.Visible = true;
                     labelHighScore.Visible = true;
+                    UpdateHighScore();
                     break;
 
                 case State.Clear:
                     labelClear.Visible = true;
                     buttonTitle.Visible = true;
                     labelHighScore.Visible = true;
+                    UpdateHighScore();
                     break;
             }
         }
@@ -286,5 +292,11 @@ namespace yoketoruCS
         {
             labelScore.Text = $"{score:00000}";
         }
+        void UpdateHighScore()
+        {
+            highScore = Math.Max(highScore, score);
+            labelHighScore.Text = $"High Score: {highScore:00000}";
+        }
+
     }
 }
