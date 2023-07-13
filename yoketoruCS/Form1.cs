@@ -117,11 +117,13 @@ namespace yoketoruCS
                     labelHighScore.Visible = false;
                     labelCopyright.Visible = false;
                     score = 0;
+                    UpdateScore();
                     timer = StartTimer;
                     for (int i = ObstacleIndex; i < vx.Length; i++)
                     {
                         vx[i] = random.Next(-SpeedMax, SpeedMax + 1);
                         vy[i] = random.Next(-SpeedMax, SpeedMax + 1);
+                        chrLabels[i].Visible = true;
                     }
                     RandomObstacleAndItemPosition();
                     itemCount = ItemMax;
@@ -188,6 +190,10 @@ namespace yoketoruCS
         {
             for (int i = ObstacleIndex; i < chrLabels.Length; i++)
             {
+                //非表示の奴は処理しない
+                if (!chrLabels[i].Visible) continue;
+                //if (chrLabels[i].Visible == false) continue;
+
                 chrLabels[i].Left += vx[i];
                 chrLabels[i].Top += vy[i];
 
@@ -220,7 +226,7 @@ namespace yoketoruCS
                     {
                         //TODO　アイテム
                         AddScore(timer * PointRate);
-                        itemCount++;
+                        itemCount--;
                         chrLabels[i].Visible = false;
                         if(itemCount <= 0)
                         {
