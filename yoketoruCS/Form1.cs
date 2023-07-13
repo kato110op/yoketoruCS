@@ -246,6 +246,7 @@ namespace yoketoruCS
             {
                 timer = 0;
                 nextState = State.Gameover;
+
             }
 
             labeltimer.Text = $"{timer:000}";
@@ -273,7 +274,6 @@ namespace yoketoruCS
             score = Math.Min(score + Point,ScoreMax);
 
             UpdateScore();
-
         }
 
         void UpdateScore()
